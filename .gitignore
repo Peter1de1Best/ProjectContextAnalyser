@@ -1,0 +1,29 @@
+# .NET / C# builds en objecten
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]emp/
+[Tt]mp/
+
+# Persoonlijke mappen
+[Nn]otes/
+
+# Visual Studio bestanden
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# Build resultaten voor dotnet build
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# OS-specifieke bestanden
+.DS_Store
+Thumbs.db

@@ -1,0 +1,26 @@
+{
+  "ProjectFolderPath": "C:\\Users\\PBdeB\\OneDrive\\Documenten\\Projects\\ProjectContextAnalyser",
+  "IsProgrammingProject": true,
+  "IncludedExtensions": [
+    ".cs",
+    ".json"
+  ],
+
+  "IgnoredDirectories": [
+
+    "obj",
+    ".git"
+  ],
+
+  "IgnoredFiles": [
+    "Example.cs",
+    "Data\\example.txt",
+    "ProjectContext.txt"
+  ],
+
+  "Output": {
+    "Mode": "Full",
+    "IgnoreMode": "Both",
+    "OutputFileName": "ProjectContext333.txt"
+  }
+}
