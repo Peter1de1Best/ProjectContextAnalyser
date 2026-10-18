@@ -1,3 +1,12 @@
+# IMPORTANT NOTE
+This project, and the readme file are a WIP, **though the code in its current iteration is fully functional and ready to test.** 
+On a branch, I am currently working on reformatting so that not everything remains in program.cs.
+When I have done that, and tested everything and verified it still works fine, I will update the readme so that it becomes (more) complete.
+
+If you want to experiment with the code in the meantime, you can run it using "dotnet run input.json" and see what happens. 
+If you wonder what field contents are allowed in input.json, you will for now have to check whether it is explained below, 
+or check the code to see what is currently being supported.
+
 # ProjectContextAnalyser
 ProjectContextAnalyser is a tool that analyzes a project directory and generates either a directory/file structure overview or a complete project dump including file contents. The analysis can be customized through an input JSON file that allows specific files and directories to be excluded from the output.
 
