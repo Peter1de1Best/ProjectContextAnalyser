@@ -6,7 +6,7 @@ namespace ProjectContextAnalyser
 {
     class ConfigurationValidation
     {
-        public static bool ValidateInputConfiguration(RetrievedInputInformation inputInfo)
+        public static bool Validate(RetrievedInputInformation inputInfo)
         {
             JsonConfiguration? configuration = inputInfo.Config;
 
