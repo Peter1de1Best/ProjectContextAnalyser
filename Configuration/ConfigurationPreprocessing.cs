@@ -69,7 +69,7 @@ namespace ProjectContextAnalyser
                     continue;
                 }
 
-                string preprocIgnoredDirectory = Normalisation.NormaliseIgnorePath(ignoredDirectory);
+                string preprocIgnoredDirectory = PathNormalisation.NormaliseIgnorePath(ignoredDirectory);
 
                 preprocIgnorePaths.Add(preprocIgnoredDirectory);
             }
@@ -85,7 +85,7 @@ namespace ProjectContextAnalyser
             {
                 IgnoredFile ignoredFileInstance = new();
 
-                string procFile = Normalisation.GeneralPathNormalise(ignoredFile);
+                string procFile = PathNormalisation.GeneralPathNormalise(ignoredFile);
                 ignoredFileInstance.NameOnlyWithExtension = Path.GetFileName(procFile);
                 string? thisPath = Path.GetDirectoryName(procFile);
                 //Console.WriteLine($"thisPath: {thisPath}");
