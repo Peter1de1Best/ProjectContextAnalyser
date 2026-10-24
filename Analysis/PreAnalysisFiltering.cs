@@ -51,29 +51,5 @@ namespace ProjectContextAnalyser
 
             return filteredOutput;
         }
-
-        public static List<ProjectFile> FilterIfApplicable(List<ProjectFile> projectFiles, ProcessedJsonConfiguration config, AnalysisType analysisType)
-        {
-            return 
-                ShouldApplyIgnoreRules(config, analysisType)
-                    ? PreAnalysisFiltering.FilterIgnoredProjectFiles(projectFiles, config)
-                    : projectFiles;
-        }
-
-        public static bool ShouldApplyIgnoreRules(ProcessedJsonConfiguration config, AnalysisType analysisType)
-        {
-            if (analysisType == AnalysisType.Structure)
-            {
-                return config.ProcIgnoreMode == IgnoreMode.Structure || config.ProcIgnoreMode == IgnoreMode.Both;
-            }
-
-            if (analysisType == AnalysisType.Contents)
-            {
-                return config.ProcIgnoreMode == IgnoreMode.Contents || config.ProcIgnoreMode == IgnoreMode.Both;
-            }
-            
-            Console.WriteLine("No valid AnalysisType inputted. Default to no filtering.");
-            return false;
-        }
     }
 }
