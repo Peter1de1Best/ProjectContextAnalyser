@@ -117,7 +117,7 @@ namespace ProjectContextAnalyser
 
         static bool ValidateInputConfigOutputFileName(JsonConfiguration configuration, bool validationIndicatesError)
         {
-            if (configuration.Output.OutputFileName == null)
+            if (configuration.Output!.OutputFileName == null) // Validation elsewhere guarantees Output is not null. 
             {
                 Console.WriteLine("ERROR: Output field OutputFileName is missing.");
                 return true;
@@ -208,8 +208,9 @@ namespace ProjectContextAnalyser
         {
             if (configuration.IsProgrammingProject)
             {
+                // Validation elsewhere guarantees IncludedExtensions is not null. 
                 bool containsRecognizedExtension = 
-                    configuration.IncludedExtensions.Any(extension => 
+                    configuration.IncludedExtensions!.Any(extension => 
                         ApplicationConfiguration.RecognizedProgrammingExtensions.Contains(extension));
 
                 if (!containsRecognizedExtension)

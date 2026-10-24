@@ -40,7 +40,7 @@ namespace ProjectContextAnalyser
                 ContentAnalysis.Run(sb, orderedProjectFilesToUse, config);
             }
 
-            WriteProjectContextFile(sb, config.Output!.OutputFileName); // elders wordt gevalideerd dat Output niet null is, en anders een error gegeven, vandaar !. 
+            WriteProjectContextFile(sb, config.Output!.OutputFileName); // Validation elsewhere guarantees Output is not null. 
         }
 
         private static void WriteProjectContextFile(StringBuilder sb, string? fileName)

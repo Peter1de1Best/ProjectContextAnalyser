@@ -20,7 +20,7 @@ namespace ProjectContextAnalyser
 
         static string GetOutputFileName(JsonConfiguration configuration)
         {
-            string outputFileName = configuration.Output.OutputFileName;
+            string outputFileName = configuration.Output!.OutputFileName!; // Validation elsewhere guarantees Output and OutputFileName are not null.
 
             if (string.IsNullOrEmpty(Path.GetExtension(outputFileName)))
             {
