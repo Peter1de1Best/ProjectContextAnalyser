@@ -23,7 +23,7 @@ namespace ProjectContextAnalyser
             {
                 var orderedProjectFilesToUse = 
                     procConfig.IgnoreInStructure
-                        ? GeneralAnalysisHelpers.FilterIgnoredProjectFiles(orderedFiles, procConfig)
+                        ? PreAnalysisFiltering.FilterIgnoredProjectFiles(orderedFiles, procConfig)
                         : projectFiles;
                     
 
@@ -34,7 +34,7 @@ namespace ProjectContextAnalyser
             {
                 var orderedProjectFilesToUse =
                     procConfig.IgnoreInContent
-                        ? GeneralAnalysisHelpers.FilterIgnoredProjectFiles(orderedFiles, procConfig)
+                        ? PreAnalysisFiltering.FilterIgnoredProjectFiles(orderedFiles, procConfig)
                         : projectFiles;
 
                 ContentAnalysis.Run(sb, orderedProjectFilesToUse, config);
